@@ -1,0 +1,39 @@
+{
+  "name": "cricket_shop",
+  "version": "2.0.0",
+  "description": "eCommerce cricket shop",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node backend/server.js",
+    "server": "nodemon backend/server.js",
+    "client": "npm start --prefix frontend",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "data:import": "node backend/seeder.js",
+    "data:destroy": "node backend/seerder.js -d"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/atifvikar/cricket_store.git"
+  },
+  "author": "Aatif Vikar Khan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/atifvikar/cricket_store/issues"
+  },
+  "homepage": "https://github.com/atifvikar/cricket_store#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cookie-parser": "^1.4.6",
+    "express": "^4.18.2",
+    "express-async-handler": "^1.2.0",
+    "jsonwebtoken": "^9.0.0",
+    "mongodb": "^5.6.0",
+    "mongoose": "^7.3.1"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.0",
+    "dotenv": "^16.3.1",
+    "nodemon": "^1.14.9"
+  }
+}
